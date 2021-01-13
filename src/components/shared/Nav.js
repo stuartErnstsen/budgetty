@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./../Budget/Budget.css"
+import { connect } from 'react-redux';
 
 class Nav extends Component {
   render() {
@@ -20,4 +21,6 @@ class Nav extends Component {
   }
 }
 
-export default Nav
+const mapStateToProps = stateRedux => stateRedux.user;
+
+export default connect(mapStateToProps)(Nav);

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { removePurchase } from '../../ducks/budgetReducer'
 
 class DisplayPurchases extends Component {
   render() {
@@ -23,4 +25,6 @@ class DisplayPurchases extends Component {
   }
 }
 
-export default DisplayPurchases
+const mapStateToProps = stateRedux => stateRedux.budget;
+
+export default connect(mapStateToProps, { removePurchase })(DisplayPurchases)

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addPurchase } from '../../ducks/budgetReducer'
 
 class AddPurchase extends Component {
 
@@ -81,4 +83,5 @@ class AddPurchase extends Component {
   }
 }
 
-export default AddPurchase
+
+export default connect(null, { addPurchase })(AddPurchase);
