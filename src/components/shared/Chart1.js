@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import { connect } from 'react-redux';
 
 
 class Chart1 extends Component {
@@ -35,4 +36,6 @@ class Chart1 extends Component {
   }
 }
 
-export default Chart1;
+const mapStateToProps = stateRedux => stateRedux.budget;
+
+export default connect(mapStateToProps)(Chart1);
